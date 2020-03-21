@@ -1,0 +1,62 @@
+{
+  "name": "gatsby-starter-typescript-PWA",
+  "private": false,
+  "description": "A simple starter to get up and developing quickly with Gatsby, added TypeScript and PWA support",
+  "version": "1.0.0",
+  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "dependencies": {
+    "@types/prettier": "^1.19.0",
+    "codemirror": "^5.52.2",
+    "gatsby": "^2.15.28",
+    "gatsby-image": "^2.2.23",
+    "gatsby-plugin-manifest": "^2.2.20",
+    "gatsby-plugin-offline": "^3.0.11",
+    "gatsby-plugin-react-helmet": "^3.1.10",
+    "gatsby-plugin-sharp": "^2.2.27",
+    "gatsby-source-filesystem": "^2.1.28",
+    "gatsby-transformer-sharp": "^2.2.19",
+    "prop-types": "^15.7.2",
+    "react": "^16.10.0",
+    "react-codemirror2": "^7.1.0",
+    "react-dom": "^16.10.0",
+    "react-helmet": "^5.2.1"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.0",
+    "@types/react-dom": "^16.9.0",
+    "@types/react-helmet": "^5.0.10",
+    "eslint-config-prettier": "^6.3.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "gatsby-plugin-typescript": "^2.1.11",
+    "prettier": "^1.19.1",
+    "typescript": "^3.6.3"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "yarn type-check && yarn lint && gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "prebuild": "yarn lint && yarn test",
+    "lint": "eslint '{__mocks__,src,test}/**/*.{js,ts,tsx}'",
+    "lint:fix": "eslint --fix '{__mocks__,src,test}/**/*.{js,ts,tsx}'",
+    "type-check": "tsc --noEmit",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \""
+  },
+  "repository": "https://github.com/markselby9/gatsby-starter-default.git",
+  "bugs": {
+    "url": "https://github.com/gatsbyjs/gatsby/issues"
+  },
+  "contributors": [
+    "Mark Feng <markselbyfcy@gmail.com>"
+  ],
+  "main": "index.js"
+}
