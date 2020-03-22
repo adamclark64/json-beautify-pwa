@@ -6,6 +6,9 @@
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "@types/prettier": "^1.19.0",
+    "@types/styled-components": "^5.0.1",
+    "antd": "^4.0.3",
+    "babel-plugin-styled-components": "^1.10.7",
     "codemirror": "^5.52.2",
     "gatsby": "^2.15.28",
     "gatsby-image": "^2.2.23",
@@ -13,13 +16,20 @@
     "gatsby-plugin-offline": "^3.0.11",
     "gatsby-plugin-react-helmet": "^3.1.10",
     "gatsby-plugin-sharp": "^2.2.27",
+    "gatsby-plugin-styled-components": "^3.2.0",
     "gatsby-source-filesystem": "^2.1.28",
     "gatsby-transformer-sharp": "^2.2.19",
+    "hoist-non-react-statics": "^3.3.2",
+    "json-beautify": "^1.1.1",
+    "json-stringify-pretty-compact": "^2.0.0",
     "prop-types": "^15.7.2",
     "react": "^16.10.0",
     "react-codemirror2": "^7.1.0",
     "react-dom": "^16.10.0",
-    "react-helmet": "^5.2.1"
+    "react-helmet": "^5.2.1",
+    "react-hooks-global-state": "^1.0.0",
+    "react-hot-loader": "^4.12.20",
+    "styled-components": "^5.0.1"
   },
   "devDependencies": {
     "@types/react": "^16.9.0",

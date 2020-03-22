@@ -2,6 +2,8 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
+import { ThemePicker } from "./ThemePicker"
+
 interface HeaderProps {
   siteTitle: string
 }
@@ -31,6 +33,7 @@ const Header = ({ siteTitle }: HeaderProps) => (
           {siteTitle}
         </Link>
       </h1>
+      <ThemePicker />
     </div>
   </header>
 )

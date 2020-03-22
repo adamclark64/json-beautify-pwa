@@ -1,16 +1,9 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-
+import styled from "styled-components"
 import Header from "./Header"
-import "./Layout.css"
+import { globalContext, useProvideState } from "../../utils/globalState"
 
 interface LayoutProps {
   readonly children?: React.ReactNode | readonly React.ReactNode[]
@@ -28,24 +21,19 @@ const Layout = ({ children }: LayoutProps) => {
   `)
 
   return (
-    <>
+    <ProvideState>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0px 1.0875rem 1.45rem`,
-          paddingTop: 0,
-        }}
-      >
-        <main>{children}</main>
+      <>
+        <MainWrapper>{children}</MainWrapper>
         <footer>
-          © {new Date().getFullYear()}, Built with
+          © {new Date().getFullYear()}, Built with ❤️
           {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
+          <a href="https://www.shartywhereuat.org">
+            https://www.shartywhereuat.org
+          </a>
         </footer>
-      </div>
-    </>
+      </>
+    </ProvideState>
   )
 }
 
@@ -54,3 +42,20 @@ Layout.propTypes = {
 }
 
 export default Layout
+
+const MainWrapper = styled.main`
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: 1fr 1fr;
+`
+
+const ProvideState = ({ children }) => {
+  const auth: any = useProvideState()
+  return (
+    <globalContext.Provider value={auth}>{children}</globalContext.Provider>
+  )
+}
+
+const ConsumeState = ({ children }) => {
+  return <globalContext.Consumer>{children}</globalContext.Consumer>
+}
