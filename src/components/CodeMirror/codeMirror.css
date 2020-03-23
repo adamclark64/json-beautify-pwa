@@ -1,3 +1,5 @@
 .CodeMirror {
   height: 75vh !important;
+  max-width: 45vw !important;
+  width: 100%;
 }

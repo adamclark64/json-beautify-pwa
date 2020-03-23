@@ -7,23 +7,14 @@ import "antd/dist/antd.css"
 import { useGlobalState } from "../../../utils/globalState"
 
 export default () => {
-  return (
-    <Dropdown overlay={menu} placement="bottomLeft">
-      <Button>
-        Choose A Theme <DownOutlined />
-      </Button>
-    </Dropdown>
-  )
-}
+  const { theme, setTheme } = useGlobalState()
 
-const menu = () => {
-  const { state, setState } = useGlobalState()
-  return (
-    <Menu
-      onClick={({ item }) =>
-        setState({ theme: item.props.children.props.children })
-      }
-    >
+  const handleMenuClick = e => {
+    setTheme(e.item.props.children.props.children)
+  }
+
+  const menu = (
+    <Menu onClick={handleMenuClick}>
       {themes.map((theme, key) => {
         return (
           <Menu.Item key={key}>
@@ -32,5 +23,15 @@ const menu = () => {
         )
       })}
     </Menu>
+  )
+  return (
+    <>
+      <h2>Current theme: {theme}</h2>
+      <Dropdown overlay={menu} placement="bottomLeft">
+        <Button>
+          Choose A Theme <DownOutlined />
+        </Button>
+      </Dropdown>
+    </>
   )
 }

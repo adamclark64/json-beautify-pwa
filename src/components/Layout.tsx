@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 import Header from "./Header"
-import { globalContext, useProvideState } from "../../utils/globalState"
+import { globalContext, useProvideState, State } from "../../utils/globalState"
 
 interface LayoutProps {
   readonly children?: React.ReactNode | readonly React.ReactNode[]
@@ -50,12 +50,12 @@ const MainWrapper = styled.main`
 `
 
 const ProvideState = ({ children }) => {
-  const auth: any = useProvideState()
+  const theme: State = useProvideState()
   return (
-    <globalContext.Provider value={auth}>{children}</globalContext.Provider>
+    <globalContext.Provider value={theme}>{children}</globalContext.Provider>
   )
 }
 
-const ConsumeState = ({ children }) => {
-  return <globalContext.Consumer>{children}</globalContext.Consumer>
-}
+// const ConsumeState = ({ children }) => {
+//   return <globalContext.Consumer>{children}</globalContext.Consumer>
+// }

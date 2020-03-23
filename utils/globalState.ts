@@ -1,16 +1,24 @@
 import React from "react"
 
-export const globalContext = React.createContext({ theme: "" })
+export const globalContext = React.createContext({
+  theme: "tomorrow-night-eighties",
+  setTheme: () => {},
+})
 
-export const useGlobalState = () => {
+export const useGlobalState = (): State => {
   return React.useContext(globalContext)
 }
 
-export const useProvideState = () => {
-  const [state, setState] = React.useState({ theme: "" })
+export const useProvideState = (): State => {
+  const [theme, setTheme] = React.useState("tomorrow-night-eighties")
 
   return {
-    state,
-    setState,
+    theme,
+    setTheme,
   }
+}
+
+export interface State {
+  theme: string
+  setTheme: Function
 }
