@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter with TypeScript and PWA`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `JSON beautify PWA`,
+    description: `simple app to beautify JSON in a PWA that can be saved as an app to desktop or mobile`,
+    author: `github.com/adamclark64`,
   },
   plugins: [
     `gatsby-plugin-styled-components`,

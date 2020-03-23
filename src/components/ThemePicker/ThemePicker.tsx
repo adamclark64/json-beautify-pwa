@@ -14,7 +14,11 @@ export default () => {
   }
 
   const menu = (
-    <Menu onClick={handleMenuClick}>
+    <Menu
+      style={{ height: "50vh", overflowY: "scroll" }}
+      theme="dark"
+      onClick={handleMenuClick}
+    >
       {themes.map((theme, key) => {
         return (
           <Menu.Item key={key}>
@@ -35,3 +39,8 @@ export default () => {
     </>
   )
 }
+
+// const StyledMenu = styled(Menu)`
+//   height: 200px;
+//   overflow: scroll;
+// `
