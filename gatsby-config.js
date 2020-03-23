@@ -23,8 +23,8 @@ module.exports = {
         name: `json-beautify`,
         short_name: `json-beautify`,
         start_url: `/`,
-        background_color: `#edbf93`,
-        theme_color: `#edbf93`,
+        background_color: `tomato`,
+        theme_color: `tomato`,
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
