@@ -13,7 +13,6 @@ export const themes = [
   "cobalt                 ",
   "colorforth             ",
   "darcula                ",
-  "dracula                ",
   "duotone-dark           ",
   "duotone-light          ",
   "eclipse                ",

@@ -17,6 +17,7 @@ export default ({ value, onBeforeChange }) => {
         mode: "javascript",
         theme,
         lineNumbers: true,
+        lineWrapping: true,
       }}
       onBeforeChange={onBeforeChange}
       onChange={onBeforeChange}
