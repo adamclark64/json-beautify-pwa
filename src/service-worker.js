@@ -31,19 +31,19 @@ const requestNotificationPermission = async () => {
 
 // registerServiceWorker()
 
-self.addEventListener("install", function() {
+self.addEventListener("install", function () {
   console.log("Install!")
 })
 
-self.addEventListener("activate", function() {
+self.addEventListener("activate", function () {
   console.log("Activate!")
 })
 
-self.addEventListener("fetch", function(event) {
+self.addEventListener("fetch", function (event) {
   console.log("Fetch!", event)
 })
 
-self.addEventListener("push", function(event) {
+self.addEventListener("push", function (event) {
   console.log("Push!", event)
   requestNotificationPermission().then(() => {
     self.registration.showNotification("push notification works!")

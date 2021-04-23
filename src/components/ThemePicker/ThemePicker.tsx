@@ -9,8 +9,8 @@ import { useGlobalState } from "../../../utils/globalState"
 export default () => {
   const { theme, setTheme } = useGlobalState()
 
-  const handleMenuClick = e => {
-    setTheme(e.item.props.children.props.children)
+  const handleMenuClick = (e) => {
+    setTheme(e.item.props.children[1].props.children)
   }
 
   const menu = (
