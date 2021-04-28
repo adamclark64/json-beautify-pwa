@@ -26,11 +26,7 @@ const Layout = ({ children }: LayoutProps) => {
       <>
         <MainWrapper>{children}</MainWrapper>
         <footer>
-          © {new Date().getFullYear()}, Built with ❤️
-          {/* {` `}
-          <a href="https://www.shartywhereuat.org">
-            https://www.shartywhereuat.org
-          </a> */}
+          © {new Date().getFullYear()}, Built with 🧇 && 🍕 && 🥓
         </footer>
       </>
     </ProvideState>
