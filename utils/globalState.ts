@@ -10,7 +10,7 @@ export const useGlobalState = (): State => {
 }
 
 export const useProvideState = (): State => {
-  const [theme, setTheme] = React.useState("tomorrow-night-eighties")
+  const [theme, setTheme] = React.useState("erlang-dark")
 
   return {
     theme,
